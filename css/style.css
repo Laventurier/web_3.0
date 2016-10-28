@@ -6,11 +6,17 @@ header .phone {
 header .head {
   position: relative;
   height: 588px;
-  background: url(../img/head.jpg); }
+  background: url("../img/head.jpg"); }
 
-header .container ul li {
-  display: inline-block;
-  color: #fff; }
+header .container ul {
+  position: absolute;
+  z-index: 2; }
+  header .container ul li {
+    display: inline-block;
+    color: #fff; }
+
+header .phone-wrapper div:first-child {
+  z-index: 2; }
 
 header .phone-wrapper h1 {
   margin-top: 131px;
@@ -30,21 +36,24 @@ header .phone-wrapper p {
 header .phone-wrapper .request-wrapper {
   margin-top: 43px;
   color: #fff;
-  text-shadow: 0px 1px 0px #000; }
+  text-shadow: 0 1px 0 #000; }
   header .phone-wrapper .request-wrapper button {
     border-radius: 25px;
     background: linear-gradient(180deg, #439ed5, #378acd);
     border: none;
     padding: 15px 44px;
-    box-shadow: inset 0px 2px 0px #a0cfea, 0px 2px 0px #164667, 0 5px 5px #343f47;
+    box-shadow: inset 0 2px 0 #a0cfea, 0 2px 0 #164667, 0 5px 5px #343f47;
     font-size: 14px;
     font-weight: bold; }
+  header .phone-wrapper .request-wrapper button:hover {
+    transition: background 0.5s ease-out;
+    background: #178bd7; }
   header .phone-wrapper .request-wrapper span.or {
     padding: 0 17px;
     font-size: 15px; }
   header .phone-wrapper .request-wrapper a {
     border-bottom: 1px solid #fff;
-    background: url(../img/tv.png) no-repeat 0px center;
+    background: url(../img/tv.png) no-repeat 0 center;
     padding-left: 22px;
     color: #fff;
     font-size: 15px; }
@@ -56,7 +65,7 @@ span.header_item {
   font-family: 'Pacifico';
   font-size: 31px;
   color: #fff;
-  text-shadow: 0px 0px 3px #000;
+  text-shadow: 0 0 3px #000;
   margin-top: 40px; }
 
 ul.header_item {
@@ -76,23 +85,24 @@ ul.header_item li {
   ul.header_item li a:hover {
     text-decoration: none; }
 
-ul.header_item li:hover, ul.header_item li.active {
+ul.header_item li.active,
+ul.header_item li:hover {
   background: linear-gradient(180deg, #333333, #47525c);
-  box-shadow: inset 0px 1px 2px #000,0px 1px 0px #66727b; }
+  box-shadow: inset 0 1px 2px #000,0px 1px 0 #66727b; }
 
 .company-wrapper {
   background: linear-gradient(180deg, #f1f1f1, #e7e7e7);
-  box-shadow: 0px 1px 0px #c3c3c3, 0px -1px #5a5a5a;
+  box-shadow: 0 1px 0 #c3c3c3, 0 -1px #5a5a5a;
   text-align: center; }
   .company-wrapper img {
-    margin: 21px 0 15px 0px; }
+    margin: 21px 0 15px; }
 
 .content-wrapper_1 {
   margin-bottom: 97px;
   text-align: center;
   background: linear-gradient(180deg, #f2f2f2, #fff); }
   .content-wrapper_1 img {
-    margin: 96px 0 30px 0; }
+    margin: 96px 0 30px; }
   .content-wrapper_1 h2 {
     font-size: 20px;
     color: #4b5a65; }
@@ -106,18 +116,109 @@ ul.header_item li:hover, ul.header_item li.active {
     margin-top: 26px;
     border-radius: 5px;
     color: #fff;
-    text-shadow: 0px -1px 3px #000;
-    box-shadow: inset 0px 2px 0px #abd0e9, 0px 0px 1px #3d7aab,inset 0px -1px #609bd0; }
+    text-shadow: 0 -1px 3px #000;
+    box-shadow: inset 0 2px 0 #abd0e9, 0 0 1px #3d7aab,inset 0 -1px #609bd0; }
 
 .projects-wrapper h3 {
-  background: url(../img/select.png) no-repeat 0px center;
+  background: url(../img/select.png) no-repeat 0 center;
   padding-left: 32px;
   font-size: 20px; }
 
 .projects-wrapper ul {
   margin-top: 22px;
+  margin-bottom: 115px;
   padding: 0; }
   .projects-wrapper ul li {
     border: 3px solid #fff;
-    box-shadow: 0px 0px 5px #000;
+    box-shadow: 0 0 5px #000;
     list-style-type: none; }
+
+.feed-wrapper {
+  padding-bottom: 60px; }
+  .feed-wrapper .news {
+    padding: 20px 0 0; }
+    .feed-wrapper .news span {
+      color: #b0b0b0;
+      font-size: 11px; }
+    .feed-wrapper .news a {
+      color: #3c92d0; }
+    .feed-wrapper .news div {
+      padding: 0; }
+      .feed-wrapper .news div h4 {
+        font-size: 15px;
+        color: #5c5c5c; }
+      .feed-wrapper .news div p {
+        color: #888888;
+        font-size: 13px;
+        margin-bottom: 0; }
+    .feed-wrapper .news img {
+      border: 3px solid #fff;
+      box-shadow: 0 0 2px #000; }
+  .feed-wrapper h3 {
+    font-size: 20px;
+    padding-left: 30px; }
+  .feed-wrapper .row div:first-child h3 {
+    background: url(../img/icon_4.png) no-repeat 0 center; }
+  .feed-wrapper .row div:last-child h3 {
+    background: url(../img/icon_5.png) no-repeat 0 center; }
+
+footer .row {
+  border-top: 1px solid #e8e8e8; }
+  footer .row span {
+    display: block;
+    color: #8a8a8a;
+    font-size: 13px;
+    margin-top: 21px; }
+  footer .row ul {
+    float: right;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 13px 0 34px 0; }
+    footer .row ul li {
+      width: 30.5px;
+      height: 30px;
+      list-style-type: none;
+      display: inline-block;
+      float: left;
+      margin-right: 10px; }
+      footer .row ul li a {
+        display: block;
+        width: inherit;
+        height: inherit;
+        background: url(../img/social_used.png); }
+    footer .row ul li:nth-child(1) a {
+      background: url(../img/social_used.png) 0px 0px; }
+    footer .row ul li:nth-child(2) a {
+      background: url(../img/social_used.png) -41.5px 0px; }
+    footer .row ul li:nth-child(3) a {
+      background: url(../img/social_used.png) -81.5px 0px; }
+    footer .row ul li:nth-child(4) {
+      margin: 0; }
+      footer .row ul li:nth-child(4) a {
+        background: url(../img/social_used.png) -122.5px 0px; }
+    footer .row ul li:nth-child(1):hover a {
+      transition: background 1s ease;
+      background: url(../img/social.png) 0px 0px; }
+    footer .row ul li:nth-child(2):hover a {
+      transition: background 1s ease;
+      background: url(../img/social.png) -41.5px 0px; }
+    footer .row ul li:nth-child(3):hover a {
+      transition: background 1s ease;
+      background: url(../img/social.png) -81.5px 0px; }
+    footer .row ul li:nth-child(4):hover a {
+      transition: background 1s ease;
+      background: url(../img/social.png) -122.5px 0px; }
+
+@media (max-width: 768px) {
+  footer {
+    text-align: center; }
+    footer ul {
+      display: inline-block;
+      float: none !important; }
+  header .head .container .phone-wrapper h1 {
+    margin-top: 100px;
+    font-size: 26px; }
+  header .head .container .phone-wrapper span, header .head .container .phone-wrapper p {
+    font-size: 13px; }
+  header .head .container .request-wrapper button, header .head .container .request-wrapper span, header .head .container .request-wrapper a {
+    font-size: 12px; } }
