@@ -1,18 +1,123 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-header .container ul li{
-  display: inline-block;
-  color:#fff;
-}
-header .container ul{
-  padding-left:0;
-}
-header{
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+header .phone {
+  position: absolute;
+  bottom: 0; }
+
+header .head {
+  position: relative;
   height: 588px;
-  background: url(img/head.jpg);
-}
-header span{
+  background: url(../img/head.jpg); }
+
+header .container ul li {
+  display: inline-block;
+  color: #fff; }
+
+header .phone-wrapper h1 {
+  margin-top: 131px;
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold; }
+
+header .phone-wrapper span {
+  font-size: 16px;
+  color: #dcdcdc; }
+
+header .phone-wrapper p {
+  margin-top: 24px;
+  font-size: 16px;
+  color: #a0a0a0; }
+
+header .phone-wrapper .request-wrapper {
+  margin-top: 43px;
+  color: #fff;
+  text-shadow: 0px 1px 0px #000; }
+  header .phone-wrapper .request-wrapper button {
+    border-radius: 25px;
+    background: linear-gradient(180deg, #439ed5, #378acd);
+    border: none;
+    padding: 15px 44px;
+    box-shadow: inset 0px 2px 0px #a0cfea, 0px 2px 0px #164667, 0 5px 5px #343f47;
+    font-size: 14px;
+    font-weight: bold; }
+  header .phone-wrapper .request-wrapper span.or {
+    padding: 0 17px;
+    font-size: 15px; }
+  header .phone-wrapper .request-wrapper a {
+    border-bottom: 1px solid #fff;
+    background: url(../img/tv.png) no-repeat 0px center;
+    padding-left: 22px;
+    color: #fff;
+    font-size: 15px; }
+  header .phone-wrapper .request-wrapper a:hover {
+    border-bottom: none;
+    text-decoration: none; }
+
+span.header_item {
   font-family: 'Pacifico';
-  font-size:31px;
-  color:#fff;
+  font-size: 31px;
+  color: #fff;
   text-shadow: 0px 0px 3px #000;
-}
+  margin-top: 40px; }
+
+ul.header_item {
+  margin-top: 47px; }
+
+.header_item {
+  display: inline-block; }
+
+ul.header_item li {
+  border-radius: 25px; }
+  ul.header_item li a {
+    display: block;
+    color: #fff;
+    padding: 7px 16px;
+    font-size: 1.2em;
+    text-transform: capitalize; }
+  ul.header_item li a:hover {
+    text-decoration: none; }
+
+ul.header_item li:hover, ul.header_item li.active {
+  background: linear-gradient(180deg, #333333, #47525c);
+  box-shadow: inset 0px 1px 2px #000,0px 1px 0px #66727b; }
+
+.company-wrapper {
+  background: linear-gradient(180deg, #f1f1f1, #e7e7e7);
+  box-shadow: 0px 1px 0px #c3c3c3, 0px -1px #5a5a5a;
+  text-align: center; }
+  .company-wrapper img {
+    margin: 21px 0 15px 0px; }
+
+.content-wrapper_1 {
+  margin-bottom: 97px;
+  text-align: center;
+  background: linear-gradient(180deg, #f2f2f2, #fff); }
+  .content-wrapper_1 img {
+    margin: 96px 0 30px 0; }
+  .content-wrapper_1 h2 {
+    font-size: 20px;
+    color: #4b5a65; }
+  .content-wrapper_1 p {
+    font-size: 14px;
+    color: #a4a4a4; }
+  .content-wrapper_1 button {
+    border: none;
+    background: linear-gradient(180deg, #58a0d3, #498cca);
+    padding: 12px 24px;
+    margin-top: 26px;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 0px -1px 3px #000;
+    box-shadow: inset 0px 2px 0px #abd0e9, 0px 0px 1px #3d7aab,inset 0px -1px #609bd0; }
+
+.projects-wrapper h3 {
+  background: url(../img/select.png) no-repeat 0px center;
+  padding-left: 32px;
+  font-size: 20px; }
+
+.projects-wrapper ul {
+  margin-top: 22px;
+  padding: 0; }
+  .projects-wrapper ul li {
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 5px #000;
+    list-style-type: none; }
