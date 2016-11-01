@@ -4,6 +4,8 @@ $(document).ready(function() {
         items: 4,
         loop: true,
         margin: 30,
+        navigation:true,
+        navigationText: [''],
         responsive: {
             // breakpoint from 0 up
             0: {
@@ -19,4 +21,6 @@ $(document).ready(function() {
             }
         }
     });
+  $('.owl-prev').text(' ');
+  $('.owl-next').text(' ');
 });
